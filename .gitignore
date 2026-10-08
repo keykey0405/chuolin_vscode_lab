@@ -1,0 +1,13 @@
+# 编译生成的程序
+*.exe
+*.o
+*.out
+
+# VSCode 临时缓存
+.vscode/.cache
+.vscode/*.log
+
+# 系统文件
+Thumbs.db
+.DS_Store
+//git 自动跳过 exe，不会把编译产物上传仓库，仓库不能传exe
