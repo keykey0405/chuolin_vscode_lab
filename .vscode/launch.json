@@ -1,7 +1,32 @@
 {
   "version": "0.2.0",
   "configurations": [
-
+    {
+      "name": "C/C++: g++ 调试活动文件",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "为 gdb 启用整齐打印",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "将反汇编风格设置为 Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "C/C++: g++ 生成活动文件"
+    },
     {
       "name": "C/C++: g++ 调试多文件工程",
       "type": "cppdbg",
@@ -22,75 +47,6 @@
         }
       ],
       "preLaunchTask": "C/C++: g++ 生成全部源文件（多文件工程）"
-    },
-    {
-      // 运行可执行文件（不进入调试器）：选好这一项后按 Ctrl+F5 直接跑 main.exe；
-      // 按 F5 则会带 gdb 调试运行，两种方式共用同一个配置。
-      "name": "C/C++: 运行多文件工程（不调试）",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${workspaceFolder}/main.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      // true = 用独立的控制台窗口运行，能正常看到输出、也能用 cin 输入
-      "externalConsole": true,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      // 运行前先把最新代码编译成 main.exe，不想每次都编译就把这一行删掉
-      "preLaunchTask": "C/C++: g++ 生成全部源文件（多文件工程）"
-    },
-    {
-      // 运行当前打开的 .cpp：先编译成同目录下的同名 exe，再执行它
-      "name": "C/C++: 运行当前文件（C++，不调试）",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": true,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "C/C++: g++ 生成活动文件"
-    },
-    {
-      // 运行当前打开的 .c 文件，用 gcc 编译
-      "name": "C/C++: 运行当前文件（C 语言，不调试）",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": true,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
-      "setupCommands": [
-        {
-          "description": "为 gdb 启用整齐打印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "C/C++: gcc 生成活动文件（C 语言）"
     }
   ]
 }
