@@ -24,3 +24,4 @@ int main()
 }
 //E:\05_code_and_tools\VSCode_C_Cpp\VSCode_C_Cpp\sample_project>cd demo\simple_demo
 //then type .\hello.exe
+//什么tasks和launch.json都用老师文档里的来，文件夹的很诡异
