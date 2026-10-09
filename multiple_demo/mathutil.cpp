@@ -1,15 +1,16 @@
-/**
- * @file    mathutil.cpp
- * @brief   mathutil.h 的实现。
- */
 #include "mathutil.h"
+#include <vector>
 
-long long factorial(int n)
+std::vector<long long> factorials(int n)
 {
+    std::vector<long long> out;
     long long r = 1;
-    for (int i = 2; i <= n; ++i)
+    for (int i = 1; i <= n; ++i)
+    {
         r *= i;
-    return r;
+        out.push_back(r);
+    }
+    return out;
 }
 
 bool is_prime(int n)
