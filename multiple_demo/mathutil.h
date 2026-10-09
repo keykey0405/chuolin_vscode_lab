@@ -9,14 +9,26 @@
 #define MATHUTIL_H
 
 #include <stdbool.h>
+#include <vector>
 
-/** @brief 求 n 的阶乘（要求 0 <= n <= 20，超出会溢出）。 */
-long long factorial(int n);
-
+/** @brief 求1~n的阶乘序列，返回vector数组 */
+std::vector<long long> factorials(int n);
 /** @brief 判断 n 是否为素数。 */
 bool is_prime(int n);
-
-/** @brief 求 1 + 2 + ... + n。 */
+/** @brief 求 1 + 2 + … + n。 */
 long long sum_to(int n);
 
 #endif /* MATHUTIL_H */
+
+
+
+/*
+#include <stdbool.h>
+
+ @brief 求 n 的阶乘（要求 0 <= n <= 20，超出会溢出）。 
+long long factorials(int n);
+
+ @brief 判断 n 是否为素数。 
+bool is_prime(int n);
+原来老师给我的文件里是这样*/
+
