@@ -1,6 +1,6 @@
 #目标app，依赖两个cpp源码文件
-app: main.cpp calc.cpp
-	g++ main.cpp calc.cpp -o app
+app.exe: main.cpp calc.cpp
+	g++ main.cpp calc.cpp -o app.exe
 
 #目标clean，没有依赖文件，专门用来清理
 clean:

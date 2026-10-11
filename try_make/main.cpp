@@ -3,7 +3,7 @@
 using namespace std;
 int main() 
 {
-    std::cout << add(1,2) << std::endl;
+    std::cout << add(7,8) << std::endl;
     return 0;
 }
 /*我直接按了shift+ctrl+b的话会报错，上面弹出来的是g++生成活动文件
