@@ -31,6 +31,6 @@ int main()
 mingw32-make → 编译，生成 app.exe
 .\app.exe → 运行程序看结果
 mingw32-make clean → 删除 app.exe，清理产物*/
-/*git add .
+/*  git add .
 git commit -m "写你的提交备注，比如：完成多文件C++调试"
 git push origin 你的？支名*/
