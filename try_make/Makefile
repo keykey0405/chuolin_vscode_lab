@@ -12,9 +12,9 @@
 #清理，删除app.exe
 #mingw32-make clean
 #make不认/**/只认#还要一行行打
-
-app.exe: main.o calc.o
-	g++ main.o calc.o -o app.exe
+TARGET = myapp.exe
+$(TARGET): main.o calc.o
+	g++ main.o calc.o -o $@
 
 main.o: main.cpp calc.h
 	g++ -c main.cpp
@@ -23,7 +23,7 @@ calc.o: calc.cpp calc.h
 	g++ -c calc.cpp
 
 clean:
-	del app.exe main.o calc.o
+	del $(TARGET) main.o calc.o
 #规则：
 #g++ -c：只编译不链接，生成.o目标文件
 #依赖写了calc.h：头文件改动，也会触发重编译（这个很重要！）
