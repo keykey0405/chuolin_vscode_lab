@@ -11,7 +11,8 @@
         "-std=c++17",
         "-Wall",
         "-Wextra",
-        "-fexec-charset=GBK",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
         "${file}",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}.exe"
@@ -38,7 +39,8 @@
         "-std=c++17",
         "-Wall",
         "-Wextra",
-        "-fexec-charset=GBK",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
         "${workspaceFolder}/demo/multiple_demo/main.cpp",//不写成*cpp，我电脑老报
         "${workspaceFolder}/demo/multiple_demo/mathutil.cpp",
         "-o",

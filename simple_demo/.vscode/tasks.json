@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "cppbuild",
+      "type": "shell",
       "label": "C/C++: g++ 生成活动文件",
       "command": "C:/mingw64/bin/g++.exe",
       "args": [
@@ -11,7 +11,8 @@
         "-std=c++17",
         "-Wall",
         "-Wextra",
-        "-fexec-charset=GBK",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
         "${file}",
         "-o",
         "${fileDirname}/${fileBasenameNoExtension}.exe"
@@ -38,7 +39,8 @@
         "-std=c++17",
         "-Wall",
         "-Wextra",
-        "-fexec-charset=GBK",
+        "-finput-charset=UTF-8",
+        "-fexec-charset=UTF-8",
         "${workspaceFolder}/*.cpp",
         "-o",
         "${workspaceFolder}/main.exe"
@@ -58,7 +60,7 @@
       "detail": "把工作区里所有 .cpp 一起编译成 main.exe（通配符由 gcc 自己展开）。用 type: process 而不是 shell：VS Code 直接把参数交给编译器，不经过 PowerShell/cmd 解析，所以工程路径里带括号（例如 (C++)）或空格也不会被拆坏。若一定要用 type: shell，则 args 里的路径必须自己写成 \"\\\"${workspaceFolder}/*.cpp\\\"\" 这种带转义引号的形式"
     },
     {
-      "type": "cppbuild",
+      "type": "shell",
       "label": "C/C++: gcc 生成活动文件（C 语言）",
       "command": "C:/mingw64/bin/gcc.exe",
       "args": [
